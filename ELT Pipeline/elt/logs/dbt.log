@@ -1,0 +1,103 @@
+[0m17:23:52.035133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DECC0AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DFE0BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DFE0BB10>]}
+
+
+============================== 17:23:52.055639 | 2acf4347-9586-434c-83ce-24b7c6d50526 ==============================
+[0m17:23:52.055639 [info ] [MainThread]: Running with dbt=1.11.3
+[0m17:23:52.057251 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\HP\\.dbt', 'invocation_command': 'dbt init', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:23:52.108679 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\HP\.dbt
+[0m17:24:06.806646 [debug] [MainThread]: Starter project path: C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\include\starter_project
+[0m17:24:06.944617 [info ] [MainThread]: 
+Your new dbt project "custom_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:24:06.970348 [info ] [MainThread]: Setting up your profile.
+[0m17:25:28.314510 [error] [MainThread]: Encountered an error:
+
+[0m17:25:28.328261 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m17:25:28.331781 [debug] [MainThread]: Command `dbt init` failed at 17:25:28.331401 after 96.55 seconds
+[0m17:25:28.332976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E107D5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E10A4B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E0E66690>]}
+[0m17:25:28.334588 [debug] [MainThread]: Flushing usage events
+[0m17:25:40.393713 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:25:47.306549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5A0A34AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5A1B77ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5A1B77B10>]}
+
+
+============================== 17:25:47.311319 | db4df7ea-4c7d-41af-8d50-6220ca4c57c8 ==============================
+[0m17:25:47.311319 [info ] [MainThread]: Running with dbt=1.11.3
+[0m17:25:47.312385 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\HP\\.dbt', 'invocation_command': 'dbt init', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:26:50.172780 [info ] [MainThread]: A project called custom_postgres already exists here.
+[0m17:26:50.174423 [debug] [MainThread]: Command `dbt init` succeeded at 17:26:50.174230 after 63.10 seconds
+[0m17:26:50.174886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5A1B83360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5A2BFDC70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5A19EEE00>]}
+[0m17:26:50.175334 [debug] [MainThread]: Flushing usage events
+[0m17:26:51.915120 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:29:27.221187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B6EB594AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B6EC6D7ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B6EC6D7B10>]}
+
+
+============================== 17:29:27.226149 | 7f386f80-99dd-4ed4-8116-9c0e613987f4 ==============================
+[0m17:29:27.226149 [info ] [MainThread]: Running with dbt=1.11.3
+[0m17:29:27.227089 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\HP\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:29:34.906441 [debug] [MainThread]: Starter project path: C:\Users\HP\Desktop\ELT Pipeline\env\Lib\site-packages\dbt\include\starter_project
+[0m17:29:34.968643 [info ] [MainThread]: 
+Your new dbt project "custom_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:29:34.970330 [info ] [MainThread]: Setting up your profile.
+[0m17:30:58.713420 [info ] [MainThread]: Profile custom_postgres written to C:\Users\HP\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:30:58.715585 [debug] [MainThread]: Command `dbt init` succeeded at 17:30:58.715344 after 91.73 seconds
+[0m17:30:58.716158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B6ED90D810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B6ED75DD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B6EC54FF00>]}
+[0m17:30:58.716733 [debug] [MainThread]: Flushing usage events
+[0m17:31:01.668719 [debug] [MainThread]: An error was encountered while trying to flush usage events
